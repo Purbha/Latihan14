@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Latihan14</string>
+    <string name="imageView_Main_Banner">Main Banner</string>
+    <string name="imageView_List_Logo">List Logo</string>
+    <string name="textView_List_Header">List Header</string>
+    <string name="textView_List_Desc">List Description</string>
+    <string name="textView_List_Val">List Val</string>
+    <string name="imageView_Detail_Banner">Detail Banner</string>
+    <string name="textView_Detail_Header">Header</string>
+    <string name="textView_Detail_Desc">Description</string>
+    <string name="textView_Detail_Bio">Bio</string>
+</resources>
