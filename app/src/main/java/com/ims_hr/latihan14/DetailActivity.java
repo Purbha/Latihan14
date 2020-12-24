@@ -7,9 +7,7 @@ import android.widget.TextView;
 
 public class DetailActivity extends AppCompatActivity {
 
-    TextView TV_Header;
-    TextView TV_Desc;
-    TextView TV_Bio;
+    TextView TV_Header, TV_Desc, TV_Bio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +25,7 @@ public class DetailActivity extends AppCompatActivity {
 
     private void Set_Object() {
         Intent intent = getIntent();
-        String IDHero = intent.getStringExtra("idhero");
+        String IDHero = intent.getStringExtra(MainActivity.IDHERO);
         if(IDHero.equals("1")) {
             TV_Header.setText("EARTHSHAKER");
             TV_Desc.setText("Melee - Support - Initiator - Disabler - Nuker");

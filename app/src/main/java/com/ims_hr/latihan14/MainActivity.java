@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     ListView LV_Data;
     List<Adapter_Array> ListData;
     Adapter_List adapter_list;
+    public static final String IDHERO = "idhero";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private void Set_Object() {
         ListData.add(new Adapter_Array("EARTHSHAKER","Melee - Support - Initiator - Disabler - Nuker","1"));
         ListData.add(new Adapter_Array("ANTI-MAGE","Melee - Carry - Escape - Nuker","2"));
-        Adapter_List adapter_list = new Adapter_List(MainActivity.this,R.layout.template_list,ListData);
+        adapter_list = new Adapter_List(MainActivity.this,R.layout.template_list,ListData);
         LV_Data.setAdapter(adapter_list);
     }
 
@@ -41,9 +42,8 @@ public class MainActivity extends AppCompatActivity {
         LV_Data.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String IDHero = ListData.get(position).Val;
                 Intent intent = new Intent(MainActivity.this,DetailActivity.class);
-                intent.putExtra("idhero",IDHero);
+                intent.putExtra(IDHERO,ListData.get(position).Val);
                 startActivity(intent);
             }
         });

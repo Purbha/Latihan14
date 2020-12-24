@@ -17,7 +17,7 @@ public class Adapter_List extends ArrayAdapter<Adapter_Array> {
 
     Context Ctx;
     private int ResID;
-    List<Adapter_Array> Data = null;
+    List<Adapter_Array> Data;
 
     public Adapter_List(@NonNull Context context, @LayoutRes int resource, @NonNull List<Adapter_Array> objects) {
         super(context, resource, objects);
@@ -27,22 +27,20 @@ public class Adapter_List extends ArrayAdapter<Adapter_Array> {
     }
 
     static class DataHolder{
-        TextView TV_Val;
-        TextView TV_Header;
-        TextView TV_Desc;
+        TextView TV_Val, TV_Header, TV_Desc;
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        DataHolder Holder = null;
+        DataHolder Holder;
         if(convertView == null){
             LayoutInflater inflater = ((Activity) Ctx).getLayoutInflater();
             convertView = inflater.inflate(ResID,parent,false);
             Holder = new DataHolder();
-            Holder.TV_Val = (TextView)convertView.findViewById(R.id.textView_List_Val);
-            Holder.TV_Header = (TextView)convertView.findViewById(R.id.textView_List_Header);
-            Holder.TV_Desc = (TextView)convertView.findViewById(R.id.textView_List_Desc);
+            Holder.TV_Val = convertView.findViewById(R.id.textView_List_Val);
+            Holder.TV_Header = convertView.findViewById(R.id.textView_List_Header);
+            Holder.TV_Desc = convertView.findViewById(R.id.textView_List_Desc);
             convertView.setTag(Holder);
         } else {
             Holder = (DataHolder)convertView.getTag();
