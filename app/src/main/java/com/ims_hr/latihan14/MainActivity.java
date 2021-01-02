@@ -28,10 +28,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void Inisial() {
         LV_Data = findViewById(R.id.ListView_Data);
-        ListData = new ArrayList<>();
+
     }
 
     private void Set_Object() {
+        ListData = new ArrayList<>();
         ListData.add(new Adapter_Array("EARTHSHAKER","Melee - Support - Initiator - Disabler - Nuker","1"));
         ListData.add(new Adapter_Array("ANTI-MAGE","Melee - Carry - Escape - Nuker","2"));
         adapter_list = new Adapter_List(MainActivity.this,R.layout.template_list,ListData);
