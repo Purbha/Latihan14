@@ -2,10 +2,9 @@ package com.ims_hr.latihan14;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,13 +39,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Listen_LV_Data() {
-        LV_Data.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(MainActivity.this,DetailActivity.class);
-                intent.putExtra(IDHERO,ListData.get(position).Val);
-                startActivity(intent);
-            }
+        LV_Data.setOnItemClickListener((parent, view, position, id) -> {
+            Intent intent = new Intent(MainActivity.this,DetailActivity.class);
+            intent.putExtra(IDHERO,ListData.get(position).Val);
+            startActivity(intent);
         });
     }
 

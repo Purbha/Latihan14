@@ -8,7 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="textView_Header" parent="@android:style/TextAppearance.Medium">
-        <item name="android:textColor">@color/HotPink</item>
+        <item name="android:textColor">@color/Brown</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:fontFamily">sans-serif-condensed</item>
