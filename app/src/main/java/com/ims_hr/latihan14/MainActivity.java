@@ -12,7 +12,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     ListView LV_Data;
-    List<Adapter_Array> ListData;
+    List<ArrayModel> ListData;
     Adapter_List adapter_list;
     public static final String IDHERO = "idhero";
 
@@ -32,9 +32,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void Set_Object() {
         ListData = new ArrayList<>();
-        ListData.add(new Adapter_Array("EARTHSHAKER","Melee - Support - Initiator - Disabler - Nuker","1"));
-        ListData.add(new Adapter_Array("ANTI-MAGE","Melee - Carry - Escape - Nuker","2"));
-        adapter_list = new Adapter_List(MainActivity.this,R.layout.template_list,ListData);
+        ListData.add(new ArrayModel("EARTHSHAKER","Melee - Support - Initiator - Disabler - Nuker","1"));
+        ListData.add(new ArrayModel("ANTI-MAGE","Melee - Carry - Escape - Nuker","2"));
+        adapter_list = new Adapter_List(MainActivity.this, R.layout.template_list, ListData);
         LV_Data.setAdapter(adapter_list);
     }
 

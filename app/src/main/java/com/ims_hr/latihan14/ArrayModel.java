@@ -1,12 +1,12 @@
 package com.ims_hr.latihan14;
 
-public class Adapter_Array {
+public class ArrayModel {
 
     String Header = "";
     String Desc = "";
     String Val = "";
 
-    public Adapter_Array(String header, String desc, String val) {
+    public ArrayModel(String header, String desc, String val) {
         this.Header = header;
         this.Desc = desc;
         this.Val = val;
