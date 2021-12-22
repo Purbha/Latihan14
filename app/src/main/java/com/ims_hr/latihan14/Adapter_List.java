@@ -27,16 +27,14 @@ public class Adapter_List extends ArrayAdapter<ArrayModel> {
         this.Data = objects;
     }
 
-    /*
+
     static class DataHolder{
         TextView TV_Val, TV_Header, TV_Desc;
     }
-    */
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        /*
         DataHolder Holder;
         if(convertView == null){
             LayoutInflater inflater = ((Activity) Ctx).getLayoutInflater();
@@ -53,20 +51,6 @@ public class Adapter_List extends ArrayAdapter<ArrayModel> {
         Holder.TV_Val.setText(dataItem.Val);
         Holder.TV_Header.setText(dataItem.Header);
         Holder.TV_Desc.setText(dataItem.Desc);
-        return convertView;
-        */
-        TextView TV_Val= null, TV_Header = null, TV_Desc = null;
-        if(convertView == null) {
-            LayoutInflater inflater = ((Activity) Ctx).getLayoutInflater();
-            convertView = inflater.inflate(ResID, parent, false);
-            TV_Val = convertView.findViewById(R.id.textView_List_Val);
-            TV_Header = convertView.findViewById(R.id.textView_List_Header);
-            TV_Desc = convertView.findViewById(R.id.textView_List_Desc);
-        }
-        ArrayModel dataItem = Data.get(position);
-        TV_Val.setText(dataItem.Val);
-        TV_Header.setText(dataItem.Header);
-        TV_Desc.setText(dataItem.Desc);
         return convertView;
 
     }
