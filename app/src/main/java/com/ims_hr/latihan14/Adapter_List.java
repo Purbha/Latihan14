@@ -27,7 +27,6 @@ public class Adapter_List extends ArrayAdapter<ArrayModel> {
         this.Data = objects;
     }
 
-
     static class DataHolder{
         TextView TV_Val, TV_Header, TV_Desc;
     }

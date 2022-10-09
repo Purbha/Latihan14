@@ -12,7 +12,7 @@ import java.util.List;
 public class AdapterListview extends BaseAdapter {
 
     Context context;
-    private int ResID;
+    int ResID;
     List<ArrayModel> Data;
 
     public AdapterListview(Context context, int resID, List<ArrayModel> data) {
